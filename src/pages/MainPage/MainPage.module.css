@@ -1,0 +1,150 @@
+.switch {
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+  position: relative;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-slider {
+  position: absolute;
+  background: #474b5c;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.switch-slider::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  left: 5px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  transition: 0.35s;
+}
+
+.switch-input:checked + .switch-slider {
+  background: #b3b7cd;
+}
+
+.switch-input:checked + .switch-slider::before {
+  transform: translateX(16px);
+  background: #4d516d;
+}
+
+.desc {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.desc > h1 {
+  margin-bottom: 10px;
+}
+
+.toggle-theme {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.params {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.how-to-start h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 900;
+  color: var(--text-color);
+}
+
+.manual-item {
+  margin-bottom: 30px;
+  display: flex;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.manual-item h3 {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.pagination {
+  margin-right: 20px;
+  min-width: 55px;
+  min-height: 55px;
+  height: 55px;
+  width: 55px;
+  background: var(--header-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  font-size: 30px;
+  color: var(--nav-item-hover-color);
+}
+
+body:has(.click-box__section.fullscreen) {
+  overflow: hidden;
+}
+
+body:has(.click-box__section.fullscreen)::after {
+  content: "";
+  position: fixed;
+  background: var(--bg-color);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.click-box__section.fullscreen {
+  position: fixed;
+  z-index: 3;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+@media (max-width: 470px) {
+  .btn,
+  .toggle-theme {
+    margin: 20px auto;
+  }
+
+  .btn,
+  .toggle-theme:has(.click-box__section.fullscreen) {
+    margin: 5px auto;
+  }
+}
+
+@media (max-width: 290px) {
+  .manual-item h3 {
+    font-size: 15px;
+  }
+
+  .pagination {
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,142 @@
+.big-nums {
+  font-size: 54px;
+}
+
+.timer .big-nums {
+  text-shadow: 1px 1px #6c55eb, 2px 2px #6c55eb, 3px 3px #6c55eb, 4px 4px #6c55eb;
+}
+
+.speed .big-nums {
+  text-shadow: 1px 1px #b98046, 2px 2px #b98046, 3px 3px #b98046, 4px 4px #b98046;
+}
+
+.clicks .big-nums {
+  text-shadow: 1px 1px #0c9430, 2px 2px #0c9430, 3px 3px #0c9430, 4px 4px #0c9430;
+}
+
+.click-box {
+  margin-bottom: 50px;
+}
+
+.click-box__info {
+  display: flex;
+  background: #373d4a;
+  font-weight: 700;
+  border-radius: 10px 10px 0 0;
+}
+
+.timer {
+  color: #9e92ff;
+  border-bottom: 5px solid #9e92ff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timer-header {
+  display: flex;
+}
+
+.change-time {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.triangle-icon {
+  width: 15px;
+  cursor: pointer;
+}
+
+.triangle-icon:first-child {
+  transform: rotate(270deg);
+}
+
+.triangle-icon:last-child {
+  transform: rotate(90deg);
+}
+
+.speed {
+  color: #ffe52a;
+  border-bottom: 5px solid #ffe52a;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clicks {
+  border-bottom: 5px solid #8ee340;
+  color: #8ee340;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.click-box__field {
+  height: calc(50svh);
+  background: var(--click-box-color);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  color: var(--text-color);
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.click-box.fullscreen .click-box__field {
+  height: 80svh;
+}
+
+.click-box__field-status {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.ripple {
+  position: absolute;
+  background: #9e92ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  opacity: 0.4;
+  animation: ripple 0.5s linear;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .big-nums {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .change-time {
+    display: none;
+  }
+}

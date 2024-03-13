@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "item1": "CPS Test",
+    "item2": "Right Click",
+    "lang": {
+      "current": "English"
+    },
+    "seconds": "second test"
+  },
+  "main": {
+    "heading": "CPS Test (Clicks per Second)",
+    "desc": "This simple and free CPS (Clicks per Second) tester will help you quickly determine your mouse click rate.",
+    "changeTheme": "Light/Dark mode",
+    "screenMode": "Full screen",
+    "timer": "TIMER",
+    "cps": "CLICKS/S.",
+    "clicks": "CLICKS",
+    "start": "CLICK HERE TO START THE KPS TEST",
+    "restart": "restart",
+    "result": "Your result"
+  },
+  "howToStart": {
+    "heading": "How do I start the CPS Test?",
+    "item1": {
+      "heading": "Just click in the test area",
+      "desc": "To get started, just click in the testing area and the test will start immediately. You can use full screen mode and light/dark mode to make testing as convenient as possible for you."
+    },
+    "item2": {
+      "heading": "Maximize click-through rates",
+      "desc": "After running the test, try to make as many clicks as possible in the allotted time. We have different timeframes from 1 second to 10 seconds."
+    },
+    "item3": {
+      "heading": "See the result",
+      "desc": "After taking the test, you will know your score and your average click through rate (CPS)."
+    }
+  }
+}
